@@ -7,7 +7,9 @@ const DashboardLayout = () => {
 			<main style={{ display: "flex", height: "100%", background: "#011b1c" }}>
 				<Sidebar />
 				<div className="content" style={{ width: "70%", margin: "0 auto" }}>
-					<Outlet />
+					<div className="container">
+						<Outlet />
+					</div>
 				</div>
 			</main>
 		</>

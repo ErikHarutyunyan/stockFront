@@ -12,8 +12,8 @@ export const StockListWrapper = styled.div`
 	.stock-container {
 		box-sizing: content-box;
 		border: 1px solid #00d094;
-		padding: 100px;
-		width: 200px;
+		padding: 100px 20px;
+    width: 200px;
 		text-align: center;
 		cursor: pointer;
 		transition: box-shadow 0.3s;

@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
 export const StockDetailWrapper = styled.div`
+	position: relative;
+	.back {
+		position: absolute;
+		top: 40px;
+		left: -40px;
+		cursor: pointer;
+	}
+
 	p {
 		margin: 5px 0;
 	}

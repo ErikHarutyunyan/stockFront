@@ -1,16 +1,16 @@
 // import React, { useEffect } from "react";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { IconAL } from "../../components/Icons";
 import Loader from "../../components/Loader";
 import LineChart from "../../components/StockChart";
 import { StockDetailWrapper } from "./StockDetail.styled";
-
 const StockDetail = () => {
 	const { number } = useParams();
 	const [stock, setStock] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState("");
-
+	const navigate = useNavigate();
 	useEffect(() => {
 		setLoading(true);
 		const fetchData = async number => {
@@ -30,12 +30,17 @@ const StockDetail = () => {
 	const getChangeClass = nseChange => {
 		return nseChange < 0 ? "stock-change-negative" : "stock-change-positive";
 	};
-
+	const handleBack = () => {
+		navigate(-1);
+	};
 	if (loading) return <Loader />;
 	if (error) return <div className="error">Error: {error.message}</div>;
 
 	return (
 		<StockDetailWrapper>
+			<div className="back" onClick={handleBack}>
+				<IconAL />
+			</div>
 			<div className="main-container">
 				<div className="stock-details">
 					<h2 className="stock-name">{stock.Name}</h2>

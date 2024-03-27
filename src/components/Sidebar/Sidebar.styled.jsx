@@ -3,16 +3,16 @@ import styled from "styled-components";
 export const SidebarWrapper = styled.aside`
 	position: fixed;
 	height: 100%;
-	background-color: #00150f;
-	width: 5%;
+	background-color: rgb(0, 21, 15);
+	max-width: 100px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding: 0 10px;
-	transition: all 0.4s;
+	padding: 0px 10px;
+	transition: all 0.4s ease 0s;
 	min-width: 50px;
-	color: #fff;
+	color: rgb(255, 255, 255);
 	.leftbar {
 		&__logo {
 			width: 5%;
@@ -20,7 +20,7 @@ export const SidebarWrapper = styled.aside`
 			position: absolute;
 			top: 30px;
 			fill: #00d094;
-			left: 7px;
+			left: 9px;
 		}
 		&__menu {
 			list-style-type: none;
